@@ -1,0 +1,20 @@
+escape 
+
+# don't display the copyright page
+startup_message off
+
+# detach on hangup
+autodetach on
+
+hardstatus alwayslastline " %`%-w%{=b bw}%n %t%{-}%+w %=[%m/%d/%y %c] "
+
+defscrollback 1000
+
+# Open new window with Ctrl + T
+bindkey "" screen
+
+# On GNOME terminal
+# Move to the right window with Ctrl + ->
+# Move to the left window with Ctrl + <-
+bindkey "^[[1;5C" next
+bindkey "^[[1;5D" prev
