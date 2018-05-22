@@ -22,7 +22,7 @@ $ "
     PROMPT="%{[32m%}%n@%m[%W %T]%{[m%} %{[33m%}%/%{[m%}
 $ "
     PROMPT2="%{[32m%}%_%{[m%}> "
-    RPROMPT="[%{[33m%}%h%{[m%}]"
+    #RPROMPT="[%{[33m%}%h%{[m%}]"
     SPROMPT="%{[32m%}%r is correct? [n,y,a,e]:%{[m%} "
     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
         PROMPT="%{[37m%}${HOST%%.*} ${PROMPT}"
@@ -33,6 +33,15 @@ esac
 # PROMPT2="%_%% "
 # SPROMPT="%r is correct? [n,y,a,e]: "
 
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{cyan}%c%u(%b)%f"
+zstyle ':vcs_info:*' actionformats '(%b|%a)'
+precmd () { vcs_info }
+RPROMPT=$RPROMT'${vcs_info_msg_0_}'
 
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
