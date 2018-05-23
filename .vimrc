@@ -44,6 +44,7 @@ set nobackup
 set noundofile
 set history=10000
 set ruler " show the cursor position all the time
+set cursorline
 
 " Suffixes that get lower priority when doing tab completion for filenames.
 " These are files we are not likely to want to edit or read.
