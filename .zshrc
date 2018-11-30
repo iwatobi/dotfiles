@@ -128,7 +128,7 @@ setopt auto_cd
 # カレントディレクトリ中にサブディレクトリが
 # 見付からなかった場合に cd が検索する
 # ディレクトリのリスト
-cdpath=($HOME)
+#cdpath=($HOME)
 
 # ログインとログアウトを監視する。
 #watch=(all all)
@@ -137,7 +137,7 @@ watch="all"
 # 10分おき(デフォルトは1分おき)
 #LOGCHECK="$[10 * 60]"
 # 取りあえず表示してみる
-log
+#log
 
 # 10分後に自動的にログアウトする。
 #setopt autologout=10

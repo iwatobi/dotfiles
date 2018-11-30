@@ -66,7 +66,7 @@ filetype indent on
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-autocmd FileType xhtml,html,ruby,memo setlocal sw=2 ts=2 sts=2
+autocmd FileType xhtml,html,ruby,memo,yaml setlocal sw=2 ts=2 sts=2
 
 set expandtab
 autocmd FileType c,cpp,make setlocal noexpandtab
@@ -82,11 +82,11 @@ set list
 set listchars=tab:~\ ,extends:>,precedes:<,trail:-,eol:_
 
 set showmatch
-inoremap { {}<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap " ""<left>
-inoremap ' ''<left>
+"inoremap { {}<left>
+"inoremap ( ()<left>
+"inoremap [ []<left>
+"inoremap " ""<left>
+"inoremap ' ''<left>
 
 nnoremap j gj
 nnoremap k gk
@@ -112,6 +112,8 @@ set incsearch
 
 set encoding=utf-8
 set fileencodings=utf-8,euc-jp,cp932,iso-2022-jp
+
+set binary noeol
 
 set fileformats=unix,dos,mac
 if exists('&ambiwidth')
